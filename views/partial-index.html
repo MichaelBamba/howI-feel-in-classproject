@@ -1,10 +1,13 @@
 <form name="survey-form" action="/" method="post">
 
     ${classInfoData.map(entry =>{
-    return `<p>${entry.topicname1} - ${entry.ranking}
-        <select name="${entry.status_name}-select">
+    return `<p> At ${entry.topicname1} I am ${entry.status_title}
+        <select>
+            ${topicStatusData.map(status => {
+            return `<option>${status.status_title}</option>`
+            }) }
         </select>
-        <button type=button>hope</button>
+        <button>SUBMIT</button>
     </p>`
     }).join('')}
 </form>
