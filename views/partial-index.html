@@ -1,0 +1,10 @@
+<form name="survey-form" action="/" method="post">
+
+    ${classInfoData.map(entry =>{
+    return `<p>${entry.topicname1} - ${entry.ranking}
+        <select name="${entry.status_name}-select">
+        </select>
+        <button type=button>hope</button>
+    </p>`
+    }).join('')}
+</form>
